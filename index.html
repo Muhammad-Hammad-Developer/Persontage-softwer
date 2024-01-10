@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+ body{
+    background-image: url(percent-sign.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 900px;
+ }
+    .hero{
+        justify-content: center;
+        text-align: center;
+        font-size: 2rem;
+    }
+   button{
+    font-size: 2.4rem;
+    color: white;
+    background-color: rgb(220, 104, 27);
+    margin-left: 38rem;
+    transition: 1.2s ease;
+    border: none;
+    border-radius: 4px;
+    margin-top: 12px;
+   }
+   button:hover{
+    background-color: rgb(220, 142, 90);
+    color: white;
+   }
+   footer{
+    color: rgb(0, 0, 0);
+    font-size: 3rem;
+    margin-left: 138px;
+    margin-top: 270px;
+
+    
+   }
+   @media (max-width: 414px) {
+    button {
+    margin-left: 7rem;
+    margin-top: 12px;
+}
+.hero {
+
+    font-size: 3.8rem;
+    color: rgb(28, 1, 1);
+   
+}
+.hero input{
+font-size: 30px;
+}
+.op span {
+    color: white;
+    font-size: 2rem;
+}
+   }
+    
+</style>
+<body>
+    <div class="hero">
+       Your Marks: <input id="yourMarks" type="number" />
+    </div>
+    <div class="hero">
+        Total Marks: <input id="totalMarks" type="number" />
+     </div>
+     <div class="hero">Your Percentage is: <span id="percent"></span>
+    </div>
+    <button  onclick="calcluate()">Calcluate</button>
+   <footer>
+    <span>Made by Aujj Student</span>
+   </footer>
+</body>
+<script>
+    function calcluate(){
+   var yourScore = document.getElementById('yourMarks').value;
+   var totalScore = document.getElementById('totalMarks').value;
+   var percent = (yourScore * 100 ) / totalScore;
+   document.getElementById('percent').innerHTML = percent + '%'; 
+    }
+</script>
+</html>
